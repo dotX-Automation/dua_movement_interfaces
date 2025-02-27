@@ -1,0 +1,23 @@
+# Navigation operation to a target pose.
+#
+# Roberto Masocco <r.masocco@dotxautomation.com>
+#
+# June 16, 2023
+
+# GOAL
+# Header
+std_msgs/Header header
+
+# Target point
+geometry_msgs/Point target
+
+# Target heading (to be discarded if outside range [-PI +PI])
+float64 heading
+---
+# RESULT
+# Operation result
+dua_common_interfaces/CommandResultStamped result
+---
+# FEEDBACK
+# Current pose
+geometry_msgs/PoseStamped current_pose
