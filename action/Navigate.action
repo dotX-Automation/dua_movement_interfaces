@@ -10,7 +10,7 @@ geometry_msgs/PoseStamped target_pose
 ---
 # RESULT
 # Operation result
-dua_interfaces/CommandResultStamped result
+dua_common_interfaces/CommandResultStamped result
 ---
 # FEEDBACK
 # Current pose
