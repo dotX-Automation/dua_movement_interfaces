@@ -1,0 +1,22 @@
+# Loitering action.
+#
+# July 7, 2025
+
+# GOAL
+# Points of the trajectory to follow during loitering
+geometry_msgs/PoseArray points
+
+# Tells if operation must be repeated
+bool repeat
+
+# If repeating, tells if the trajectory must be repeated from the beginning or from the end
+bool reverse
+
+# Tells if operation must be stopped if an obstacle is detected along the path
+bool stop_on_obstacle
+---
+# RESULT
+# Operation result
+dua_common_interfaces/CommandResultStamped result
+---
+# FEEDBACK
