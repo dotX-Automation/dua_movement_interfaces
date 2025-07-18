@@ -7,6 +7,9 @@
 # GOAL
 # True if it is the first time the action is called
 bool first
+
+# True if the exploration routine should be executed continuously
+bool persistent true
 ---
 # RESULT
 # Operation result
