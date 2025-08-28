@@ -10,6 +10,9 @@ bool first
 
 # True if the exploration routine should be executed continuously
 bool persistent true
+
+# Zone to explore, may be empty if there are no specific regions
+geometry_msgs/Polygon zone
 ---
 # RESULT
 # Operation result
