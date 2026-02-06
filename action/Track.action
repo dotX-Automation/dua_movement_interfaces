@@ -1,0 +1,28 @@
+# Track a target in the camera frame, keeping a desired distance.
+#
+# January 2, 2026
+
+# GOAL
+# Reference frame in which tracking is evaluated
+string reference_frame
+
+# Class ID of the target to track
+string class_id
+
+# Desired distance to maintain from the target [m] (set <= 0 to disable distance control)
+float64 desired_distance 0.0
+
+# If true, finish successfully as soon as all success conditions are met.
+bool stop_on_success true
+
+# Indicates if the tracking should start from a specific side
+int8 RIGHT=-1
+int8 CENTER=0
+int8 LEFT=1
+int8 start_side 0
+---
+# RESULT
+# Operation result
+dua_common_interfaces/CommandResultStamped result
+---
+# FEEDBACK
