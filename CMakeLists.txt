@@ -22,7 +22,7 @@ file(GLOB MSG_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${MSG_DIR}/*.msg")
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${ACTION_FILES}
   ${MSG_FILES}
-  DEPENDENCIES dua_common_interfaces geometry_msgs std_msgs)
+  DEPENDENCIES action_msgs dua_common_interfaces geometry_msgs std_msgs)
 
 ament_export_dependencies(
   action_msgs
