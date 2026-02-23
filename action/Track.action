@@ -12,7 +12,13 @@ string class_id
 # Desired distance to maintain from the target [m] (set <= 0 to disable distance control)
 float64 desired_distance 0.0
 
-# If true, finish successfully as soon as all success conditions are met.
+# If true, align the frame's yaw with the target's yaw while tracking
+bool align_yaw true
+
+# If true, align the frame's normal with the target's normal while tracking
+bool align_normal true
+
+# If true, finish successfully as soon as all conditions are met
 bool stop_on_success true
 
 # Indicates if the tracking should start from a specific side
