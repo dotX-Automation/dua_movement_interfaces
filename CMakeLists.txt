@@ -9,9 +9,11 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(dua_common_interfaces REQUIRED)
+find_package(dua_mission_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(vision_msgs REQUIRED)
 
 set(ACTION_DIR "${CMAKE_CURRENT_SOURCE_DIR}/action")
 file(GLOB ACTION_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${ACTION_DIR}/*.action")
@@ -22,12 +24,14 @@ file(GLOB MSG_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${MSG_DIR}/*.msg")
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${ACTION_FILES}
   ${MSG_FILES}
-  DEPENDENCIES action_msgs dua_common_interfaces geometry_msgs std_msgs)
+  DEPENDENCIES action_msgs dua_common_interfaces dua_mission_interfaces geometry_msgs std_msgs vision_msgs)
 
 ament_export_dependencies(
   action_msgs
   dua_common_interfaces
+  dua_mission_interfaces
   geometry_msgs
-  std_msgs)
+  std_msgs
+  vision_msgs)
 
 ament_package()
