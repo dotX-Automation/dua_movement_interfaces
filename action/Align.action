@@ -1,0 +1,36 @@
+# Align a target in the camera frame, keeping a desired distance.
+#
+# March 13, 2026
+
+
+# GOAL
+# Reference frame in which tracking is evaluated
+string reference_frame
+
+# Class ID of the target to track
+string class_id
+
+# Desired distance to the target (meters)
+float64 desired_distance 0.5
+
+# Mode Selection
+uint8 MODE_CORNERS=0
+uint8 MODE_SIZE=1
+uint8 alignment_mode
+
+# if alignment_mode == MODE_CORNERS
+# Coordinates of the target corners (pixels)
+dua_mission_interfaces/Corners2D target_corners
+
+# if alignment_mode == MODE_SIZE
+# Real size of the target and desired distance (meters)
+vision_msgs/BoundingBox2D target_bbox
+
+# If true, finish successfully as soon as all conditions are met
+bool stop_on_success true
+---
+# RESULT
+# Operation result
+dua_common_interfaces/CommandResultStamped result
+---
+# FEEDBACK
