@@ -2,28 +2,25 @@
 #
 # March 13, 2026
 
-
 # GOAL
 # Reference frame in which tracking is evaluated
 string reference_frame
 
-# Class ID of the target to track
+# ID of the target to track
 string class_id
 
 # Desired distance to the target (meters)
-float64 desired_distance 0.5
+float64 desired_distance 0.0
 
-# Mode Selection
+# Mode selection
 uint8 MODE_CORNERS=0
 uint8 MODE_SIZE=1
 uint8 alignment_mode 0
 
-# if alignment_mode == MODE_CORNERS
-# Coordinates of the target corners (pixels)
+# Coordinates of the target corners (pixels), for MODE_CORNERS
 dua_mission_interfaces/Corners2D target_corners
 
-# if alignment_mode == MODE_SIZE
-# Image-space bounding box of the target (pixels), used for size/distance-based alignment
+# Image-space bounding box of the target (pixels), for MODE_SIZE
 vision_msgs/BoundingBox2D target_bbox
 
 # If true, finish successfully as soon as all conditions are met
