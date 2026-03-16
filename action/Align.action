@@ -23,7 +23,7 @@ uint8 alignment_mode 0
 dua_mission_interfaces/Corners2D target_corners
 
 # if alignment_mode == MODE_SIZE
-# Real size of the target and desired distance (meters)
+# Image-space bounding box of the target (pixels), used for size/distance-based alignment
 vision_msgs/BoundingBox2D target_bbox
 
 # If true, finish successfully as soon as all conditions are met
