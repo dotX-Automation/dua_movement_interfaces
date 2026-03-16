@@ -16,7 +16,7 @@ float64 desired_distance 0.5
 # Mode Selection
 uint8 MODE_CORNERS=0
 uint8 MODE_SIZE=1
-uint8 alignment_mode
+uint8 alignment_mode 0
 
 # if alignment_mode == MODE_CORNERS
 # Coordinates of the target corners (pixels)
